@@ -4,7 +4,6 @@ import com.smart.home.fridgemanager.db.Good;
 
 public interface Degradable {
     
-    Good deteriorate(Good good);
+    boolean isSpoiled(Good good);
 
-    Good chuckOut(Good good);
 }
