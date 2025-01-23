@@ -3,7 +3,7 @@ package com.smart.home.fridgemanager.constants;
 import lombok.Getter;
 
 @Getter
-public enum CategoryEnum {
+public enum Category {
     DRINK("Напиток"),
     SAUCE("Соус"),
     MEAT("Мясо/птица"),
@@ -20,7 +20,7 @@ public enum CategoryEnum {
 
     private final String description;
 
-    CategoryEnum(String description) {
+    Category(String description) {
         this.description = description;
     }
 }

@@ -3,7 +3,7 @@ package com.smart.home.fridgemanager.constants;
 import lombok.Getter;
 
 @Getter
-public enum GoodStateEnum {
+public enum GoodStatus {
     FREEZED("Заморожен"),
     COOLED("Охлажден"),
     SPOILED("Испорчен"),
@@ -11,7 +11,7 @@ public enum GoodStateEnum {
     UNKNOWN("Неизвестно");
     private final String description;
 
-    GoodStateEnum(String description) {
+    GoodStatus(String description) {
         this.description = description;
     }
 }
