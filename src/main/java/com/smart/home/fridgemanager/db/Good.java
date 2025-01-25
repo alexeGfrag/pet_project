@@ -4,8 +4,6 @@ import com.smart.home.fridgemanager.constants.Category;
 import com.smart.home.fridgemanager.constants.GoodStatus;
 import com.smart.home.fridgemanager.constants.Location;
 import jakarta.persistence.*;
-import org.hibernate.annotations.SQLRestriction;
-import org.hibernate.annotations.Where;
 
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -13,12 +11,7 @@ import java.util.Set;
 
 
 @Entity
-public abstract class Good extends BaseEntityWithId{
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private Long id;
+public abstract class Good extends BaseEntityWithId {
 
     @Column(name = "LOCATION")
     private Location location;
@@ -35,7 +28,6 @@ public abstract class Good extends BaseEntityWithId{
     private String description;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-//    @SQLRestriction("goodState.stateDate >= this.datePosted.atStartOfDay()")
     private Set<GoodState> goodState = new HashSet<>();
 
     @Column(name = "DATE_POSTED")
