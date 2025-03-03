@@ -1,4 +1,4 @@
-package com.smart.home.fridgemanager.db;
+package com.smart.home.fridgemanager.db.entity.goods;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -12,10 +12,10 @@ import lombok.ToString;
 @RequiredArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @ToString
-@Table(name = SingleProduct.tableName, schema = SingleProduct.schemaName)
-public class SingleProduct extends Good {
+@Table(name = SingleGood.tableName, schema = SingleGood.schemaName)
+public class SingleGood extends Good {
 
-    public static final String tableName = "SINGLE_PRODUCT";
+    public static final String tableName = "SINGLE_GOOD";
 
     public static final String schemaName = "FRIDGE";
 }

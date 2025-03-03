@@ -1,19 +1,19 @@
-package com.smart.home.fridgemanager.db;
+package com.smart.home.fridgemanager.db.entity.goods;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
-@Data
+@Getter
+@Setter
 @Entity
 public abstract class PackagedGood extends Good {
 
     @Column(name = "COUNT")
-    private AtomicInteger count;
+    private Integer count;
 
-    public abstract int getAny();
+    public abstract int getAny(int delta);
 
     public abstract int putAny(int valueToAdd);
 }

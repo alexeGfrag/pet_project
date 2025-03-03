@@ -1,6 +1,7 @@
-package com.smart.home.fridgemanager.db;
+package com.smart.home.fridgemanager.db.entity.goods;
 
 import com.smart.home.fridgemanager.constants.GoodStatus;
+import com.smart.home.fridgemanager.db.entity.baseEntities.BaseUpdatableEntity;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -13,8 +14,7 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode(callSuper = false)
 @Table
 @RequiredArgsConstructor
-
-public class GoodState extends BaseEntityWithId{
+public class GoodState extends BaseUpdatableEntity {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "STATUS")
